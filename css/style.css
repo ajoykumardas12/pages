@@ -17,8 +17,6 @@ body {
     padding-right: 50px;
 }
 
-
-
 .nav-logo{
     font-size: 1.5rem;
     color: #DFF6FF;
@@ -162,4 +160,47 @@ body {
 
 .features {
     padding: 50px 150px;
+}
+
+/* footer */
+.footer{
+    padding-top: 2rem;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-evenly;
+    row-gap: 3.5rem;
+}
+
+.footer__bg{
+    background-color:#2c2992;
+    padding: 2rem 0 3rem;
+}
+
+.footer__title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.footer__link:hover{
+    color:#6cbada;
+}
+
+.footer__made{
+    text-align: center;
+}
+
+.footer__title,
+.footer__link{
+    color: #fff;
 }
