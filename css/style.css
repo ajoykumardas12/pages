@@ -1,0 +1,132 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,500;0,700;1,100;1,500;1,700&display=swap');
+
+/* main */
+
+body {
+    background-color: #fdfdfd;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* home */
+
+.home__container{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-content: space-evenly;
+}
+
+.home__title{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 6rem;
+    padding-bottom: 1rem;
+    color: #2c2992;
+}
+
+.home__subtitle{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-bottom: .5rem;
+}
+
+.signup-btn{
+    background-color: #2c2992; /* Green */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.signup-btn:hover {
+    background-color: #3a35c0;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.home__img{
+    text-align: right;
+}
+
+.home__image{
+    width: 500px;
+    height: 450px;
+    align-self: flex-end;
+}
+
+/* features */
+
+#features {
+    color: #fdfdfd;
+    background-color: #2c2992;
+    border-radius: 50px;
+    margin: 2px 0;
+}
+
+.feature-box {
+    text-align: center;
+}
+
+/* register-login */
+.register-login {
+    margin: 5px 50px;
+    align-content: center;
+}
+
+.register-login .row {
+    margin: 100px 25px;
+}
+
+.register-login .button-column {
+    
+}
+
+.register-login .btn {
+    margin: 5px 0;
+    /* transition: all 0.5s;
+    cursor: pointer; */
+}
+
+/* .register-login .btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.register-login .btn span::after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+} */
+
+/* cards */
+.flex-card {
+    align-content: center;
+    text-align:center;
+    padding: 5px 150px;
+}
+
+.card-title {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.card-body{
+    font-size:xx-large;
+    font-weight: bolder;
+}
+
+.features {
+    padding: 50px 150px;
+}
