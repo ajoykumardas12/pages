@@ -105,41 +105,46 @@ body {
     color: #6cbada;
 }
 
+.features{
+    margin-top: 50px;
+    padding: 50px 150px;
+    color: #2c2992;
+}
+
+
 /* register-login */
 .register-login {
-    margin: 5px 50px;
-    align-content: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    text-align: center;
 }
 
 .register-login .row {
-    margin: 100px 25px;
+    margin: 50px 25px;
 }
 
-.register-login .button-column {
-    
-}
-
-.register-login .btn {
-    margin: 5px 0;
-    /* transition: all 0.5s;
-    cursor: pointer; */
-}
-
-/* .register-login .btn span {
-    cursor: pointer;
+.login-register-btn{
+    width: 200px;
+    background-color: #2c2992; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
-    position: relative;
-    transition: 0.5s;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
-.register-login .btn span::after{
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-} */
+.login-register-btn:hover {
+    background-color: #3a35c0;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 /* cards */
 .flex-card {
@@ -156,10 +161,6 @@ body {
 .card-body{
     font-size:xx-large;
     font-weight: bolder;
-}
-
-.features {
-    padding: 50px 150px;
 }
 
 /* footer */
@@ -185,11 +186,18 @@ body {
     margin-bottom: 0.25rem;
 }
 
+.footer__title:hover{
+    color:#6cbada;
+}
 
 .footer__links{
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
+}
+
+.footer__links a{
+    text-decoration: none;
 }
 
 .footer__link:hover{
@@ -198,6 +206,9 @@ body {
 
 .footer__made{
     text-align: center;
+}
+.footer__made:hover{
+    color:#9996f1;
 }
 
 .footer__title,
