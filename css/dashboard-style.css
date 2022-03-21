@@ -166,6 +166,10 @@ body{
     cursor: pointer;
 }
 
+.role{
+    font-size: 1.1em;
+}
+
 .user{
     position: relative;
     width: 40px;
