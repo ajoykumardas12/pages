@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/87801205b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- nav area  -->
@@ -35,7 +37,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="features.html">Features</a>
+                    <a class="nav-link" href="/features.html">Features</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,7 +59,7 @@
                     </div>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="index.html#contact">Contact</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
@@ -181,7 +183,7 @@
 
     <!-- Register-login  -->
     <section class="register-login">
-      <div class="get__started">Let's Get Started</div>
+      <div class="register-login__header">Let's Get Started</div>
       <div class="row">
         <div class="button-column col-sm-6">
           <button type="button" class="login-register-btn">
@@ -192,6 +194,45 @@
           <button type="button" class="login-register-btn">
             <span>Login</span>
           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register-login  -->
+    <section class="contact" id="contact">
+      <div class="contact__header">Get in Touch</div>
+      <div class="row">
+        <div class="wrapper">
+          <form action="#">
+            <div class="double-field">
+              <div class="field">
+                <input type="text" name="name" placeholder="Enter your name">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="field">
+                <input type="text" name="email" placeholder="Enter your email">
+                <i class='fas fa-envelope'></i>
+              </div>
+            </div>
+            <div class="double-field">
+              <div class="field">
+                <input type="text" name="phone" placeholder="Enter your phone">
+                <i class='fas fa-phone-alt'></i>
+              </div>
+              <div class="field">
+                <input type="text" name="institution" placeholder="Enter Institution name">
+                <i class='fas fa-globe'></i>
+              </div>
+            </div>
+            <div class="message">
+              <textarea placeholder="Write your message" name="message"></textarea>
+              <i class="fa-solid fa-comment"></i>
+            </div>
+            <div class="button-area">
+              <button type="submit">Send Message</button>
+              <span></span>
+            </div>
+          </form>
         </div>
       </div>
     </section>
