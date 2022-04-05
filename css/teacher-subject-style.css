@@ -198,22 +198,6 @@ body{
     color: var(--blue);
 }
 
-.add-subject{
-    margin: 0 30px 10px;
-    /* text-align: right; */
-}
-
-.add-subject-btn{
-    padding: 2px;
-    color: var(--white);
-    width: 120px;
-    background: var(--blue);
-    border-radius: 5px;
-}
-.add-subject-btn:hover{
-    background-color: var(--blue);
-}
-
 table{
     border-collapse: collapse;
     margin: 0px 30px 50px;
@@ -243,28 +227,6 @@ table td{
 table a{
     text-decoration: none;
     color: var(--white);
-}
-
-.edit-btn{
-    border-radius: 50%;
-    background-color: var(--blue);
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--white);
-}
-
-.delete-btn{
-    font-size: 22px;
-    font-weight: 500;
-    color: red;
-}
-
-.add-btn{
-    background-color: var(--blue);
-}
-
-.btn-primary{
-    border-color: var(--blue);
 }
 
 
