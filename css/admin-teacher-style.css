@@ -245,6 +245,72 @@ table td{
     color: var(--white);
 }
 
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.form {
+    width: 100%;
+    height: auto;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #fff;
+    margin: 3% auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: relative;
+    /* border-bottom: 5px solid #ccc; */
+}
+
+.form p:before {
+    content: attr(type);
+    display: block;
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: #5a5a5a;
+    float: left;
+    width: 40%;
+    transition: all .3s;
+}
+button {
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    background: 0;
+    color: var(--blue);
+    cursor: pointer;
+    transition: all .3s;
+}
+button:hover {
+    background: var(--blue);
+    color: #fff;
+}
+.text-right{
+    text-align: right;
+}
+
+.relative{
+    position: relative;
+}
+
+.form-control:focus{
+    border-color: var(--blue);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(30, 102, 195);
+}
+
+input:focus{
+    color: var(--black1);
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color: #fff;
+}
+
+
+
+
 .delete-btn{
     font-size: 22px;
     font-weight: 500;

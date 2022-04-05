@@ -168,7 +168,9 @@
                         <td>22/03/2022</td>
                         <td>
                             <div class="edit-btn">
-                                <ion-icon name="create-outline"></ion-icon>
+                                <a href="" data-toggle="modal" data-target="#modal-update-role">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
                             </div>
                         </td>
                         <td>
@@ -178,6 +180,35 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+
+            <!-- modal -->
+            <div class="modal fade" id="modal-update-role" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold">Update Role</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="email">Role:</label>
+                                <select class="form-control" name="role" id="role">
+                                    <option value="0">Student</option>
+                                    <option value="1">Teacher</option>
+                                    <option value="2">Admin</option>
+                                </select>
+                            </div>
+                                            
+                            <div class="text-right">
+                                <a href=""><button class="movebtn movebtnre" type="Reset"><ion-icon name="refresh-outline"></ion-icon> Reset </button></a>
+                                <a href=""><button class="movebtn movebtnsu" type="Submit">Update <ion-icon name="paper-plane-outline"></ion-icon></button></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>              
             </div>
         </div>
 
