@@ -11,7 +11,7 @@
     rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/admin-student-style.css">
+    <link rel="stylesheet" href="css/admin-exam-style.css">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -38,7 +38,7 @@
                         <span class="title">Class</span>
                     </a>
                 </li>
-                <li>
+                <li class="clicked">
                     <a href="admin-subject.html" class="icon">
                         <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
                         <span class="title">Subject</span>
@@ -50,7 +50,7 @@
                         <span class="title">Teacher</span>
                     </a>
                 </li>
-                <li class="clicked">
+                <li>
                     <a href="admin-student.html" class="icon">
                         <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                         <span class="title">Student</span>
@@ -94,38 +94,35 @@
             </div>
 
             <!-- student -->
-            <div class="student">
-                <div class="student_management-header">
-                    Student Management
+            <div class="subject">
+                <div class="subject_management-header">
+                    Subject Management
                 </div>
-                <div class="add-student">
-                    <div class="add-student-btn">
+                <div class="add-subject">
+                    <div class="add-subject-btn">
                         <ion-icon name="add-circle-outline"></ion-icon>
-                        Add Student
+                        Add Subject
                     </div>
                 </div>
                 <table>
                     <tr>
-                        <th>Image</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Email</th>
-                        <th>Mobile</th>
-                        <th>Class</th>
-                        <th>Date of Birth</th>
-                        <th>Added On</th>
+                        <th>Subject</th>
+                        <th>Assigned to Class(es)</th>
+                        <th>Assigned Teacher(s)</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     <tr>
-                        <td><img src="images/user.jpg" alt=""></td>
-                        <td>Ajoy Kumar Das</td>
-                        <td>Pandua,Hooghly,712111</td>
-                        <td>ajoykumardas@gmail.com</td>
-                        <td>1234567890</td>
-                        <td>Information Technology, 4th</td>
-                        <td>11/11/2000</td>
-                        <td>22/03/2022</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            <ul>Information Technology 4th Year 8th Semester</ul>
+                            <ul>Computer Science and Technology 4th Year 8th Semester</ul>
+                        </td>
+                        <td>
+                            <ul>Abc Das</ul>
+                            <ul>Efg Kar</ul>
+                            <ul>Hij Kundu</ul>
+                        </td>
                         <td>
                             <div class="edit-btn">
                                 <ion-icon name="create-outline"></ion-icon>
@@ -138,14 +135,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="images/user.jpg" alt=""></td>
-                        <td>Ajoy Kumar Das</td>
-                        <td>Pandua,Hooghly,712111</td>
-                        <td>ajoykumardas@gmail.com</td>
-                        <td>1234567890</td>
-                        <td>Information Technology, 4th</td>
-                        <td>11/11/2000</td>
-                        <td>22/03/2022</td>
+                        <td>Cryptography</td>
+                        <td>
+                            <ul>Information Technology 4th Year 8th Semester</ul>
+                            <ul>Computer Science and Technology 4th Year 8th Semester</ul>
+                        </td>
+                        <td>
+                            <ul>Abc Das</ul>
+                            <ul>Efg Kar</ul>
+                        </td>
                         <td>
                             <div class="edit-btn">
                                 <ion-icon name="create-outline"></ion-icon>
@@ -158,14 +156,13 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><img src="images/user.jpg" alt=""></td>
-                        <td>Ajoy Kumar Das</td>
-                        <td>Pandua,Hooghly,712111</td>
-                        <td>ajoykumardas@gmail.com</td>
-                        <td>1234567890</td>
-                        <td>Information Technology, 4th</td>
-                        <td>11/11/2000</td>
-                        <td>22/03/2022</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            <ul>Information Technology 4th Year 8th Semester</ul>
+                        </td>
+                        <td>
+                            <ul>Abc Das</ul>
+                        </td>
                         <td>
                             <div class="edit-btn">
                                 <ion-icon name="create-outline"></ion-icon>
