@@ -11,6 +11,7 @@
 
 :root{
     --blue: #2c2992;
+    --blue-light: #3f3acf;
     --white: #fff;
     --grey: #f5f5f5;
     --black1: #222;
@@ -188,27 +189,64 @@ body{
     object-fit: cover;
 }
 
+/* exam_tab */
+.exam_tab_options{
+    display: flex;
+    margin: 1rem 5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
 
-/* subject */
+.tabs_button{
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 10px 16px;
+    background: var(--black2);
+    transition: background 0.3s ease;
+}
 
-.subject_management-header{
+.tabs_button:hover{
+    background: var(--blue-light);
+}
+
+.active_tab_button{
+    background: var(--blue);
+}
+
+.exam_tabs{
+    display: none;
+}
+
+.exam_tabs_active{
+    display: block;
+}
+
+
+/* exam management */
+
+.exam_management-header{
     margin: 30px 30px 40px;
     font-size: 32px;
     font-weight: 700;
     color: var(--blue);
 }
 
-.add-subject{
+.exam-subject{
     margin: 0 30px 10px;
-    text-align: right;
 }
 
-.add-subject-btn{
-    padding: 2px;
+.add-btn{
     color: var(--white);
-    width: 120px;
     background: var(--blue);
     border-radius: 5px;
+}
+.add-btn:hover{
+    background-color: var(--blue);
 }
 
 table{
@@ -225,7 +263,7 @@ td{
 table th,
 table td{
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 table td img{
@@ -235,6 +273,22 @@ table td img{
 
 table td{
     font-size: 16px;
+}
+
+table a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+table button{
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2px 4px;
+    background: var(--blue);
 }
 
 .edit-btn{
@@ -250,6 +304,27 @@ table td{
     font-weight: 500;
     color: red;
 }
+
+/* exam_details */
+.exam_details-header{
+    margin: 30px 30px 40px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+/* questions */
+.questions-header{
+    margin: 30px 30px 40px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.question{
+    margin: 0 30px 10px;
+}
+
 
 
 /* Responsive */

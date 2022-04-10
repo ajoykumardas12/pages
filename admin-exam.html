@@ -38,7 +38,7 @@
                         <span class="title">Class</span>
                     </a>
                 </li>
-                <li class="clicked">
+                <li>
                     <a href="admin-subject.html" class="icon">
                         <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
                         <span class="title">Subject</span>
@@ -56,7 +56,7 @@
                         <span class="title">Student</span>
                     </a>
                 </li>
-                <li>
+                <li class="clicked">
                     <a href="admin-exam.html" class="icon">
                         <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
                         <span class="title">Exam</span>
@@ -93,39 +93,97 @@
                 </div>
             </div>
 
-            <!-- student -->
-            <div class="subject">
-                <div class="subject_management-header">
-                    Subject Management
+            <!-- exam tab -->
+            <div class="exam_tab">
+                <div class="exam_tab_options">
+                    <div class="col-md-4">
+                        <button class="tabs_button active_tab_button" data-tab-target="#exam_management" target="1">Exam Management</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="tabs_button" data-tab-target="#exam_details">Exam Details</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="tabs_button" data-tab-target="#questions">Questions</button>
+                    </div>
                 </div>
-                <div class="add-subject">
-                    <div class="add-subject-btn">
+            </div>
+
+            <!-- exam management-->
+            <div class="exam_management exam_tabs exam_tabs_active" id="exam_management" data-tab-content>
+                <div class="exam_management-header">
+                    Exam Management
+                </div>
+                <div class="exam-subject">
+                    <button type="button" class="btn btn-primary add-btn" data-toggle="modal" data-target="#modalAddExam">
                         <ion-icon name="add-circle-outline"></ion-icon>
-                        Add Subject
+                        Add Exam
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAddExam" tabindex="-1" role="dialog" aria-labelledby="modalAddExamTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAddExamTitle">Add Exam</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <form action="">
+                                        <label for="email">Exam :</label>
+                                        <input class="form-control" id="name" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                        <label for="email">Assigned to Subject:</label>
+                                        <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                        <label for="email">Date:</label>
+                                        <input class="form-control" id="date" type="date" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter date">
+                                        <label for="email">Duration(minutes):</label>
+                                        <input class="form-control" id="duration" type="number"  
+                                        required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary add-btn">Add Exam</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
                 </div>
                 <table>
                     <tr>
+                        <th>Exam Name</th>
                         <th>Subject</th>
-                        <th>Assigned to Class(es)</th>
-                        <th>Assigned Teacher(s)</th>
+                        <th>Assigned to Class</th>
+                        <th>Exam Date</th>
+                        <th>Duration</th>
+                        <th>Result</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
                     <tr>
+                        <td>Cryptography CA3</td>
                         <td>Cryptography and Network Security</td>
                         <td>
-                            <ul>Information Technology 4th Year 8th Semester</ul>
-                            <ul>Computer Science and Technology 4th Year 8th Semester</ul>
+                            Information Technology 4th Year 8th Semester
                         </td>
                         <td>
-                            <ul>Abc Das</ul>
-                            <ul>Efg Kar</ul>
-                            <ul>Hij Kundu</ul>
+                            23/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            Exam Pending
                         </td>
                         <td>
                             <div class="edit-btn">
-                                <ion-icon name="create-outline"></ion-icon>
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExam">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
                             </div>
                         </td>
                         <td>
@@ -135,18 +193,23 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Cryptography</td>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
                         <td>
-                            <ul>Information Technology 4th Year 8th Semester</ul>
-                            <ul>Computer Science and Technology 4th Year 8th Semester</ul>
+                            Information Technology 4th Year 8th Semester
                         </td>
                         <td>
-                            <ul>Abc Das</ul>
-                            <ul>Efg Kar</ul>
+                            02/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            <button>Publish Result</button>
                         </td>
                         <td>
                             <div class="edit-btn">
-                                <ion-icon name="create-outline"></ion-icon>
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExam">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
                             </div>
                         </td>
                         <td>
@@ -156,16 +219,23 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Cryptography CA1</td>
                         <td>Cryptography and Network Security</td>
                         <td>
-                            <ul>Information Technology 4th Year 8th Semester</ul>
+                            Information Technology 4th Year 8th Semester
                         </td>
                         <td>
-                            <ul>Abc Das</ul>
+                            09/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            <button>View Result</button>
                         </td>
                         <td>
                             <div class="edit-btn">
-                                <ion-icon name="create-outline"></ion-icon>
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExam">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
                             </div>
                         </td>
                         <td>
@@ -175,6 +245,360 @@
                         </td>
                     </tr>
                 </table>
+                <!-- Modal -->
+                <div class="modal fade" id="modalUpdateExam" tabindex="-1" role="dialog" aria-labelledby="modalUpdateSubjectExam" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalUpdateExamTitle">Update Exam</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <form action="">
+                                    <label for="name">Exam :</label>
+                                    <input class="form-control" id="name" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                    <label for="subject">Assigned to Subject:</label>
+                                    <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                    <label for="date">Date:</label>
+                                    <input class="form-control" id="date" type="date" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter date">
+                                    <label for="duration">Duration(minutes):</label>
+                                    <input class="form-control" id="duration" type="number"  
+                                    required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary add-btn">Update Exam</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- exam details -->
+            <div class="exam_details exam_tabs" id="exam_details" target="2">
+                <div class="exam_details-header">
+                    Exam Details
+                </div>
+                <table>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Subject</th>
+                        <th>Exam Date-time</th>
+                        <th>Duration</th>
+                        <th>Total Questions</th>
+                        <th>Marks for right ans</th>
+                        <th>Negative marks</th>
+                        <th>Result</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            23/04/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            Exam Pending
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExamDetails">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            2/04/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            <button>Publish Result</button>
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExamDetails">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            09/03/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            <button>View Result</button>
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateExamDetails">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Modal -->
+                <div class="modal fade" id="modalUpdateExamDetails" tabindex="-1" role="dialog" aria-labelledby="modalUpdateExamDetails" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalUpdateExamDetailsTitle">Update Exam Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <form action="">
+                                    <label for="examname">Exam :</label>
+                                    <input class="form-control" id="examname" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                    <label for="subject">Assigned to Subject:</label>
+                                    <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                    <label for="date">Date & Time:</label>
+                                    <input class="form-control" id="date" type="date"
+                                    required="" autofocus="" autocomplete="" placeholder="Select date">
+                                    <input class="form-control" id="time" type="time"
+                                    required="" autofocus="" autocomplete="" placeholder="Select time">
+                                    <label for="duration">Duration(minutes):</label>
+                                    <input class="form-control" id="duration" type="number"  
+                                    required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                    <label for="qno">Number of Questions :</label>
+                                    <input class="form-control" id="qno" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select number of questions">
+                                    <label for="marks">Marks for right answer :</label>
+                                    <input class="form-control" id="marks" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select marks for right answer">
+                                    <label for="negmarks">Negative marks :</label>
+                                    <input class="form-control" id="negmarks" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select negative Marks for wrong answer">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary add-btn">Update Exam Details</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- questions -->
+            <div class="questions exam_tabs" id="questions" target="3">
+                <div class="questions-header">
+                    Question Management
+                </div>
+                <div class="question">
+                    <button type="button" class="btn btn-primary add-btn" data-toggle="modal" data-target="#modalAddQuestion">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        Add Question
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAddQuestion" tabindex="-1" role="dialog" aria-labelledby="modalAddQuestionTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAddQuestionTitle">Add Question</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <form action="">
+                                        <label for="email">Exam :</label>
+                                        <input class="form-control" id="name" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                        <label for="email">Assigned to Subject:</label>
+                                        <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                        <label for="email">Date:</label>
+                                        <input class="form-control" id="date" type="date" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter date">
+                                        <label for="email">Duration(minutes):</label>
+                                        <input class="form-control" id="duration" type="number"  
+                                        required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary add-btn">Add Exam</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Subject</th>
+                        <th>Assigned to Class</th>
+                        <th>Exam Date</th>
+                        <th>Duration</th>
+                        <th>Result</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            23/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            Exam Pending
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            02/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            <button>Publish Result</button>
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA1</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            09/04/2022
+                        </td>
+                        <td>30 minutes</td>
+                        <td>
+                            <button>View Result</button>
+                        </td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Modal -->
+                <div class="modal fade" id="modalUpdateQuestion" tabindex="-1" role="dialog" aria-labelledby="modalUpdateQuestion" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalUpdateQuestionTitle">Update Question</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <form action="">
+                                    <label for="name">Exam :</label>
+                                    <input class="form-control" id="name" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                    <label for="subject">Assigned to Subject:</label>
+                                    <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                    <label for="date">Date:</label>
+                                    <input class="form-control" id="date" type="date" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter date">
+                                    <label for="duration">Duration(minutes):</label>
+                                    <input class="form-control" id="duration" type="number"  
+                                    required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary add-btn">Update Exam</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -209,6 +633,40 @@
         }
         list.forEach((item) =>
         item.addEventListener('click',activeLink));
+
+        //tabsToggle
+        let tabOptions = document.querySelectorAll('.tabs_button');
+        let tabsList = document.querySelectorAll('.exam_tabs');
+
+        function activeTab(a){
+            tabsList.forEach((item) =>
+            item.classList.remove('exam_tabs_active'));
+            console.log(a);
+            document.querySelector(a).classList.add('exam_tabs_active');
+        }
+
+        function activeTabOption(){
+            tabOptions.forEach((item) => 
+            item.classList.remove('active_tab_button'));
+            this.classList.add('active_tab_button');
+            let val = this.getAttribute('data-tab-target');
+            activeTab(val);
+        }
+        tabOptions.forEach((item) =>
+        item.addEventListener('click', activeTabOption));
+
+        tabOptions.forEach((item) =>
+        item.getAttribute('target')
+        );
+
+
+        // function tabsToggle () {
+        //     list.forEach((item) =>
+        //     item.classList.remove('exam_tabs_active'));
+        //     this.classList.add('exam_tabs_active');
+        // }
+
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     
