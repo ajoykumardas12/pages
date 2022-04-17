@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination System</title>
+
+
+    <link 
+    rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/teacher-exam-style.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="containerr">
+        <div class="navigation active">
+            <ul>
+                <li>
+                    <a href="#" class="icon">
+                        <span class="icon"><ion-icon name="school"></ion-icon></span>
+                        <span class="title">Online Examination System</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard-teacher.html" class="icon">
+                        <span class="icon"><ion-icon name="grid-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teacher-subject.html" class="icon">
+                        <span class="icon"><ion-icon name="documents-outline"></ion-icon></span>
+                        <span class="title">Subject</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teacher-student.html" class="icon">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Student</span>
+                    </a>
+                </li>
+                <li class="clicked">
+                    <a href="teacher-exam.html" class="icon">
+                        <span class="icon"><ion-icon name="calendar-outline"></ion-icon></span>
+                        <span class="title">Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="teacher-profile.html" class="icon">
+                        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon">
+                        <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+        <div class="main active">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- Role -->
+                <div class="role">
+                    Teacher
+                </div>
+                <!-- userimg -->
+                <div class="user">
+                    <img src="images/user.jpg" alt="">
+                </div>
+            </div>
+
+            <!-- exam tab -->
+            <div class="exam_tab">
+                <div class="exam_tab_options">
+                    <div class="col-md-6">
+                        <button class="tabs_button active_tab_button" data-tab-target="#exam_details">Exam Details</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button class="tabs_button" data-tab-target="#questions">Questions</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- exam details -->
+            <div class="exam_details exam_tabs exam_tabs_active" id="exam_details" target="2">
+                <div class="exam_details-header">
+                    Exam Details
+                </div>
+                <table>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Subject</th>
+                        <th>Assigned to Class</th>
+                        <th>Exam Date-time</th>
+                        <th>Duration</th>
+                        <th>Total Questions</th>
+                        <th>Marks for right ans</th>
+                        <th>Negative marks</th>
+                        <th>Result</th>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            23/04/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            Exam Pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            2/04/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            Result publish pending
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA2</td>
+                        <td>Cryptography and Network Security</td>
+                        <td>
+                            Information Technology 4th Year 8th Semester
+                        </td>
+                        <td>
+                            09/03/2022 9:00am
+                        </td>
+                        <td>30 minutes</td>
+                        <td>10</td>
+                        <td>1</td>
+                        <td>.25</td>
+                        <td>
+                            <button>View Result</button>
+                        </td>
+                    </tr>
+                </table>
+                <!-- Modal -->
+                <div class="modal fade" id="modalUpdateExamDetails" tabindex="-1" role="dialog" aria-labelledby="modalUpdateExamDetails" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalUpdateExamDetailsTitle">Update Exam Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <form action="">
+                                    <label for="examname">Exam :</label>
+                                    <input class="form-control" id="examname" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter exam name">
+                                    <label for="subject">Assigned to Subject:</label>
+                                    <input class="form-control" id="subject" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter department name">
+                                    <label for="date">Date & Time:</label>
+                                    <input class="form-control" id="date" type="date"
+                                    required="" autofocus="" autocomplete="" placeholder="Select date">
+                                    <input class="form-control" id="time" type="time"
+                                    required="" autofocus="" autocomplete="" placeholder="Select time">
+                                    <label for="duration">Duration(minutes):</label>
+                                    <input class="form-control" id="duration" type="number"  
+                                    required="" autofocus="" autocomplete="" placeholder="Enter duration in minutes">
+                                    <label for="qno">Number of Questions :</label>
+                                    <input class="form-control" id="qno" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select number of questions">
+                                    <label for="marks">Marks for right answer :</label>
+                                    <input class="form-control" id="marks" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select marks for right answer">
+                                    <label for="negmarks">Negative marks :</label>
+                                    <input class="form-control" id="negmarks" type="number"
+                                    required="" autofocus="" autocomplete="" placeholder="Select negative Marks for wrong answer">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary add-btn">Update Exam Details</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- questions -->
+            <div class="questions exam_tabs" id="questions" target="3">
+                <div class="questions-header">
+                    Question Management
+                </div>
+                <div class="question">
+                    <div class="exam-name">
+                        Exam Name
+                    </div>
+
+                    <button type="button" class="btn btn-primary add-btn" data-toggle="modal" data-target="#modalAddQuestion">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        Add Question
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAddQuestion" tabindex="-1" role="dialog" aria-labelledby="modalAddQuestionTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalAddQuestionTitle">Add Question</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <form action="">
+                                        <label for="questionName">Question:</label>
+                                        <input class="form-control" id="questionName" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter question">
+
+                                        <label for="option1">Option 1:</label>
+                                        <input class="form-control" id="option1" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter option 1">
+
+                                        <label for="option2">Option 2:</label>
+                                        <input class="form-control" id="option2" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter option 2">
+
+                                        <label for="option3">Option 3:</label>
+                                        <input class="form-control" id="option3" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter option 3">
+
+                                        <label for="option4">Option 4:</label>
+                                        <input class="form-control" id="option4" type="text" pattern="[a-zA-Z\s]+" 
+                                        required="" autofocus="" autocomplete="" placeholder="Enter option 4">
+
+                                        <label for="email">Right Option:</label>
+                                        <select class="custom-select" name="cars" id="cars">
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                            <option value="option4">Option 4</option>
+                                        </select>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary add-btn">Add Question</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <th>Exam Name</th>
+                        <th>Q No</th>
+                        <th>Question</th>
+                        <th>Option 1</th>
+                        <th>Option 2</th>
+                        <th>Option 3</th>
+                        <th>Option 4</th>
+                        <th>Right Option</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>1</td>
+                        <td>Question a Sample</td>
+                        <td>
+                            option 1 sample
+                        </td>
+                        <td>
+                            option 2 sample
+                        </td>
+                        <td>
+                            option 3 sample
+                        </td>
+                        <td>
+                            option 4 sample
+                        </td>
+                        <td>Option 1</td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>1</td>
+                        <td>Question a Sample</td>
+                        <td>
+                            option 1 sample
+                        </td>
+                        <td>
+                            option 2 sample
+                        </td>
+                        <td>
+                            option 3 sample
+                        </td>
+                        <td>
+                            option 4 sample
+                        </td>
+                        <td>Option 1</td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cryptography CA3</td>
+                        <td>1</td>
+                        <td>Question a Sample</td>
+                        <td>
+                            option 1 sample
+                        </td>
+                        <td>
+                            option 2 sample
+                        </td>
+                        <td>
+                            option 3 sample
+                        </td>
+                        <td>
+                            option 4 sample
+                        </td>
+                        <td>Option 1</td>
+                        <td>
+                            <div class="edit-btn">
+                                <a href="" data-toggle="modal" data-target="#modalUpdateQuestion">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="delete-btn">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </table>
+                <!-- Modal -->
+                <div class="modal fade" id="modalUpdateQuestion" tabindex="-1" role="dialog" aria-labelledby="modalUpdateQuestion" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalUpdateQuestionTitle">Update Question</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <form action="">
+                                    <label for="questionName">Question:</label>
+                                    <input class="form-control" id="questionName" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter question">
+
+                                    <label for="option1">Option 1:</label>
+                                    <input class="form-control" id="option1" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter option 1">
+
+                                    <label for="option2">Option 2:</label>
+                                    <input class="form-control" id="option2" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter option 2">
+
+                                    <label for="option3">Option 3:</label>
+                                    <input class="form-control" id="option3" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter option 3">
+
+                                    <label for="option4">Option 4:</label>
+                                    <input class="form-control" id="option4" type="text" pattern="[a-zA-Z\s]+" 
+                                    required="" autofocus="" autocomplete="" placeholder="Enter option 4">
+
+                                    <label for="email">Right Option:</label>
+                                    <select class="custom-select" name="cars" id="cars">
+                                        <option value="option1">Option 1</option>
+                                        <option value="option2">Option 2</option>
+                                        <option value="option3">Option 3</option>
+                                        <option value="option4">Option 4</option>
+                                    </select>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary add-btn">Update Question</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        //menuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('clicked'));
+            this.classList.add('clicked');
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink));
+
+        //tabsToggle
+        let tabOptions = document.querySelectorAll('.tabs_button');
+        let tabsList = document.querySelectorAll('.exam_tabs');
+
+        function activeTab(a){
+            tabsList.forEach((item) =>
+            item.classList.remove('exam_tabs_active'));
+            console.log(a);
+            document.querySelector(a).classList.add('exam_tabs_active');
+        }
+
+        function activeTabOption(){
+            tabOptions.forEach((item) => 
+            item.classList.remove('active_tab_button'));
+            this.classList.add('active_tab_button');
+            let val = this.getAttribute('data-tab-target');
+            activeTab(val);
+        }
+        tabOptions.forEach((item) =>
+        item.addEventListener('click', activeTabOption));
+
+        tabOptions.forEach((item) =>
+        item.getAttribute('target')
+        );
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    
+</body>
+</html>
