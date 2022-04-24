@@ -20,11 +20,11 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-
     <!-- header -->
     <section class="exam-header">
+      <div>
         <div class="header">
-            <div class="exam-name">CA2 Cryptography and Network Security</div>
+          <div class="exam-name">CA2 Cryptography and Network Security</div>
         </div>
         <div class="exam-info">
           <div class="col-md-8">
@@ -35,322 +35,342 @@
             <div class="time"></div>
           </div>
         </div>
+      </div>
+      <div class="timer">
+        <p id="timer"></p>
+      </div>
     </section>
+
+    <!-- start exam -->
+    <div class="start-exam no-display" id="start-exam">
+      <button type="button" class="btn btn-primary" id="start-exam-btn">
+        Start Exam
+      </button>
+      <ul>
+        Do NOT close fullscreen during exam</li>
+      </ul>
+    </div>
 
     <!-- questions -->
-    <section class="exam-questions">
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            1
+    <section class="exam-questions" id="exam-questions">
+      <form action="">
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">1.</div>
+            <div class="question">
+              The principle of _____ ensures that only the sender and the
+              intended recipients have access to the contents of a message.
+            </div>
           </div>
-          <div class="question">
-            The principle of _____ ensures that only the sender 
-            and the intended recipients have access to the contents of a message.
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer1" id="ans1a" class="answer" />
+                <label for="ans1a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    confidentiality
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer1" id="ans1b" class="answer" />
+                <label for="ans1b">
+                  <div class="option2">
+                    <span class="option-number">b.</span>
+                    authentication
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer1" id="ans1c" class="answer" />
+                <label for="ans1c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    integrity
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer1" id="ans1d" class="answer" />
+                <label for="ans1d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    access control
+                  </div>
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer1" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  confidentiality
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer1" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option2">
-                  <span class="option-number">b.</span>
-                  authentication
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer1" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  integrity
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer1" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  access control
-                </div>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            2
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">2.</div>
+            <div class="question">
+              If the recipient of a message has to be satisfied with the
+              identify of the sender, the principle of _____ comes into picture.
+            </div>
           </div>
-          <div class="question">
-            If the recipient of a message has to be satisfied 
-            with the identify of the sender, the principle 
-            of _____ comes into picture.
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer2" id="ans2a" class="answer" />
+                <label for="ans2a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    confidentiality
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer2" id="ans2b" class="answer" />
+                <label for="ans2b">
+                  <div class="option2">
+                    <span class="option-number">b.</span>
+                    authentication
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer2" id="ans2c" class="answer" />
+                <label for="ans2c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    integrity
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer2" id="ans2d" class="answer" />
+                <label for="ans2d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    access control
+                  </div>
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer2" id="ans2" class="answer">
-              <label for="ans2" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  confidentiality
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer2" id="ans2" class="answer">
-              <label for="ans2" id="option">
-                <div class="option2">
-                  <span class="option-number">b.</span>
-                  authentication
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer2" id="ans2" class="answer">
-              <label for="ans2" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  integrity
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer2" id="ans2" class="answer">
-              <label for="ans2" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  access control
-                </div>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            3
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">3.</div>
+            <div class="question">
+              If we want to ensure the principle of _______, the contents of a
+              message must not be modified while in transit.
+            </div>
           </div>
-          <div class="question">
-            If we want to ensure the principle of 
-            _______, the contents of a message must 
-            not be modified while in transit. 
-          </div>
-        </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer3" id="ans3" class="answer">
-              <label for="ans3" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  confidentiality
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer3" id="ans3" class="answer">
-              <label for="ans3" id="option">
-                <div class="option2">
-                  <span class="option-number">b.</span>
-                  authentication
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer3" id="ans3" class="answer">
-              <label for="ans3" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  integrity
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer3" id="ans3" class="answer">
-              <label for="ans3" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  access control
-                </div>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            4
-          </div>
-          <div class="question">
-            The principle of ___________ ensures that 
-            the sender of a message cannot later claim 
-            that the message was never sent.
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer3" id="ans3a" class="answer" />
+                <label for="ans3a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    confidentiality
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer3" id="ans3b" class="answer" />
+                <label for="ans3b">
+                  <div class="option2">
+                    <span class="option-number">b.</span>
+                    authentication
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer3" id="ans3c" class="answer" />
+                <label for="ans3c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    integrity
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer3" id="ans3d" class="answer" />
+                <label for="ans3d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    access control
+                  </div>
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer4" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  access control 
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer4" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option2">
-                  <span class="option-number">b.</span>
-                  authentication
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer4" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  availability
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer4" id="ans1" class="answer">
-              <label for="ans1" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  non-repudiation
-                </div>
-              </label>
-            </li>
-          </ul>
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">4.</div>
+            <div class="question">
+              The principle of ___________ ensures that the sender of a message
+              cannot later claim that the message was never sent.
+            </div>
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer4" id="ans4a" class="answer" />
+                <label for="ans4a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    access control
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer4" id="ans4b" class="answer" />
+                <label for="ans4b">
+                  <div class="option2">
+                    <span class="option-number">b.</span>
+                    authentication
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer4" id="ans4c" class="answer" />
+                <label for="ans4c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    availability
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer4" id="ans4d" class="answer" />
+                <label for="ans4d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    non-repudiation
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            5
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">5.</div>
+            <div class="question">
+              The ______ attack is related to integrity.
+            </div>
           </div>
-          <div class="question">
-            The ______ attack is related to integrity.
-          </div>
-        </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer5" id="ans5" class="answer">
-              <label for="ans5" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  interception
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer5" id="ans5" class="answer">
-              <label for="ans5" id="option">
-                <div class="option2">
-                  <span class="option-number">b.</span>
-                  fabrication
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer5" id="ans5" class="answer">
-              <label for="ans5" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  modification
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer5" id="ans5" class="answer">
-              <label for="ans5" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  interruption
-                </div>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="questions">
-        <div class="question-header">
-          <div class="question-number">
-            6
-          </div>
-          <div class="question">
-            The __________ attack is related to availability. 
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer5" id="ans5a" class="answer" />
+                <label for="ans5a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    interception
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer5" id="ans5b" class="answer" />
+                <label for="ans5b">
+                  <div class="option2">
+                    <span class="option-number">b.</span>
+                    fabrication
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer5" id="ans5c" class="answer" />
+                <label for="ans5c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    modification
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer5" id="ans5d" class="answer" />
+                <label for="ans5d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    interruption
+                  </div>
+                </label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="options">
-          <ul>
-            <li>
-              <input type="radio" name="answer6" id="ans6" class="answer">
-              <label for="ans6" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  interception
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer6" id="ans6" class="answer">
-              <label for="ans6" id="option">
-                <div class="option1">
-                  <span class="option-number">a.</span>
-                  interception
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer6" id="ans6" class="answer">
-              <label for="ans6" id="option">
-                <div class="option3">
-                  <span class="option-number">c.</span>
-                  modification
-                </div>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="answer6" id="ans6" class="answer">
-              <label for="ans6" id="option">
-                <div class="option4">
-                  <span class="option-number">d.</span>
-                  interruption
-                </div>
-              </label>
-            </li>
-          </ul>
+
+        <div class="questions">
+          <div class="question-header">
+            <div class="question-number">6.</div>
+            <div class="question">
+              The __________ attack is related to availability.
+            </div>
+          </div>
+          <div class="options">
+            <ul>
+              <li>
+                <input type="radio" name="answer6" id="ans6a" class="answer" />
+                <label for="ans6a">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    interception
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer6" id="ans6b" class="answer" />
+                <label for="ans6b">
+                  <div class="option1">
+                    <span class="option-number">a.</span>
+                    interception
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer6" id="ans6c" class="answer" />
+                <label for="ans6c">
+                  <div class="option3">
+                    <span class="option-number">c.</span>
+                    modification
+                  </div>
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="answer6" id="ans6d" class="answer" />
+                <label for="ans6d">
+                  <div class="option4">
+                    <span class="option-number">d.</span>
+                    interruption
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+
+        <div class="submit">
+          <button class="submit-answers">Submit</button>
+        </div>
+      </form>
     </section>
+
+    <!-- not started -->
+    <div class="not-started" id="not-started">
+      Exam not started. <span> Refresh at exam time to load exam.</span>
+    </div>
+
+    <!-- exam-disabled -->
+    <div class="exam-disabled" id="disabled">
+      Exam disabled due to exiting fullscreen. <span id="refresh" style="color: #2c2992; cursor: pointer;">Refresh</span> page.
+    </div>
+
+    <!-- ended -->
+    <div class="exam-ended" id="ended">
+      Exam Ended. Back to <a href="dashboard-student.html"> Dashboard </a>
+    </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -368,5 +388,108 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      let elem = document.documentElement;
+
+      $(document).ready(function () {
+        console.log("ready");
+        // $("#start-exam").hide();
+        $("#not-started").hide();
+        $("#exam-questions").hide();
+        $("#disabled").hide();
+        $("#ended").hide();
+      });
+
+      $("#start-exam-btn").click(function () {
+        console.log("clicked");
+        $("#exam-questions").show();
+        $("#start-exam").hide();
+        openFullscreen();
+        setInterval(checkFullScrren, 1000);
+      });
+
+      $('#refresh').click(function(){
+        location.reload();
+      });
+
+      function checkFullScrren() {
+        if (
+          window.fullScreen ||
+          (window.innerWidth == screen.width &&
+            window.innerHeight == screen.height)
+        ) {
+          console.log("fullscreen");
+        } else {
+          console.log("not fullscreen");
+          endExam();
+        }
+      }
+
+      /* Function to open fullscreen mode */
+      function openFullscreen() {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.mozRequestFullScreen) {
+          /* Firefox */
+          elem.mozRequestFullScreen();
+        } else if (elem.webkitRequestFullscreen) {
+          /* Chrome, Safari & Opera */
+          elem.webkitRequestFullscreen();
+        } else if (elem.msRequestFullscreen) {
+          /* IE/Edge */
+          elem = window.top.document.body; //To break out of frame in IE
+          elem.msRequestFullscreen();
+        }
+      }
+
+      function endExam() {
+        $("#exam-questions").hide();
+        $("#disabled").show();
+      }
+
+      // timer
+      var destination = new Date("apr 23, 2022 21:37:00").getTime(); //exam end time
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+
+        var difference = destination - now;
+
+        var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        console.log(hours);
+        var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        if (hours >= 1){  //exam duration
+          document.getElementById("timer").innerText = "exam not started";
+          $("#not-started").show();
+          $("#start-exam").hide();
+        }else if(seconds >= 0) {
+          document.getElementById("timer").innerText =
+            days +
+            "d, " +
+            hours +
+            "hrs : " +
+            minutes +
+            "min : " +
+            seconds +
+            "s Left";
+            $("#not-started").hide();
+            // $("#start-exam").show();
+            $('#start-exam').removeClass('no-display');
+        }else{
+          document.getElementById("timer").innerText = "Exam Time Over";
+          $("#start-exam").hide();
+          $("#ended").show();
+          $("#exam-questions").hide();
+          $("#disabled").hide();
+        }
+      }, 1000);
+    </script>
   </body>
 </html>
