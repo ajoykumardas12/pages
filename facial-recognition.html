@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Capture webcam image with php and jquery</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+
+        <link rel="stylesheet" href="/css/facial-recognition-style.css">
+
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center header">Face Verification</h1>
+            <form action="" method="POST">
+                <!-- @csrf -->
+                <div class="row">
+
+                    <!-- webcam -->
+                    <div class="col-md-6">
+                        <div class="cam-container">
+                            <div id="camera"></div>
+                        </div>
+                        <br/>
+                        <input class="button" type=button value="Take Snapshot" onClick="take_snapshot()" style="margin: 0 auto">
+                        <input type="hidden" name="image" class="image-tag">
+                    </div>
+
+                    <!-- captured image -->
+                    <div class="col-md-6 captured-image-container">
+                        <div class="cam-container hidden-container" id="captured-image">
+                            <div id="results"></div>
+                        </div>
+                        <button class="verify-btn button unclickable" id="verify">Verify</button> 
+                    </div>
+
+                    <!-- button -->
+
+                </div>
+            </form>
+        </div>
+
+        <script>
+            Webcam.set({
+                // width: 320,
+                // height: 240,
+                dest_width: 320,
+                dest_height: 240,
+                image_format: 'jpeg',
+                jpeg_quality: 90,
+                force_flash: false
+            });
+        </script>        
+        <script language="JavaScript">
+        
+            Webcam.set({
+                margin: 0,
+                padding: 0,
+                width: 400,
+                height: 306,
+                image_format: 'jpeg',
+                jpeg_quality: 100
+            });
+          
+            Webcam.attach( '#camera' );
+          
+            function take_snapshot() {
+                
+
+
+                Webcam.snap( function(data_uri) {
+                    $(".image-tag").val(data_uri);
+                    document.getElementById('results').innerHTML = '<img src="'+data_uri+'" width="400px" height="306px" />';
+                } );
+
+                //unhide, clickable
+                document.getElementById("captured-image").classList.remove('hidden-container');
+                document.getElementById("verify").classList.remove('unclickable');
+            }
+        </script>
+    </body>
+</html>

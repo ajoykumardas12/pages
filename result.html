@@ -204,15 +204,15 @@
       }
 
       /* result_details */
-      .result_details {
-        margin: 30px;
-      }
-
       .result_details-header {
-        margin-bottom: 40px;
+        margin: 10px 30px 40px 30px;
         font-size: 32px;
         font-weight: 700;
         color: var(--blue);
+      }
+
+      .result_details {
+        margin: 10px 30px 0 30px;
       }
 
       .result_details_full {
@@ -392,8 +392,9 @@
         </div>
 
         <!-- result details -->
+        <div class="result_details-header">Exam Name: Cryptography CA3</div>
         <div class="result_details" id="result_details">
-          <div class="result_details-header">Exam Name: Cryptography CA3</div>
+          
           <div class="result_details_full" id="result_details_full">
             <div class="student_details">
               Student Name:&nbsp; Ajoy Kumar Das
@@ -442,12 +443,10 @@
               </tr>
             </table>
 
-            <div class="print_result">
-              <a href="#" class="btn btn-primary print_result_btn"
-                >Print Result</a
-              >
-            </div>
           </div>
+        </div>
+        <div class="print_result">
+          <button class="btn btn-primary print_result_btn" onclick="printElement('result_details', 'result')">Print Result</button>
         </div>
       </div>
     </div>
@@ -497,5 +496,22 @@
       list.forEach((item) => item.addEventListener("click", activeLink));
     </script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script>
+      function printElement(elem, title) {
+        var popup = window.open("", "PRINT", "height=600,width=900");
+        popup.document.write(
+          "<html><head><title>" +
+            title +
+            "</title><style>body {font-family: Arial; text-align: center;} .result_details_full {margin: 40px 30px 0 30px; font-size: 24px;font-weight: 500;} .student_details {margin-bottom: 40px;text-align: center;font-weight: 600;} table {width: 100%; border-collapse: collapse;}table,td{border: #2c2992 1px solid;}table td{text-align: center;padding: 5px;font-size: 16px;} table .obtained_marks {font-size: 20px;font-weight: 600;} </style>");
+        popup.document.write("</head><body >");
+        popup.document.write(document.getElementById(elem).innerHTML);
+        popup.document.write("</body></html>");
+        popup.document.close();
+        popup.focus();
+        popup.print();
+        popup.close();
+        return true;
+      }
+    </script>
   </body>
 </html>
